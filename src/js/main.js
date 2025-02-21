@@ -1,4 +1,5 @@
 import { getFormattedDate } from "./utility.js";
+import { fetchData } from "./utility.js";
 
 const texts = ["HI!, I'M ENDURANCE", "WELCOME!"];
 const speed = 100;
@@ -7,6 +8,7 @@ const delayBetweenTexts = 1000;
 let i = 0;
 let j = 0;
 let isErasing = false;
+
 
 async function loadComponent(file, elementId) {
     try {
@@ -55,6 +57,10 @@ function typeWritting() {
     }
 }
 
+const data = await fetchData('/src/data/projects.json')
+const projects = data.projects
+
+projects.forEach((item) => console.log(item))
 
 loadComponent('/src/components/header.html', 'header')
 document.querySelector('.date').innerHTML = getFormattedDate();
