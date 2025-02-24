@@ -139,6 +139,26 @@ button:hover {
 .popup-btn:hover {
     background-color: #0056b3;
 }
+
+/*Footer*/
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.footer-icon a {
+    margin: 0 4px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.footer-icon a:hover {
+    color: #00e676;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
     .form-container {

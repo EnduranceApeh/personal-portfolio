@@ -13,6 +13,7 @@ body{
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: "Philosopher", sans-serif;
+    overflow-x: hidden;
 }
 header a{
     text-decoration: none;
@@ -48,8 +49,8 @@ header a{
 nav {
     position: absolute;
     top: 60px;
-    right: -100%; /* Initially hidden */
-    background: rgba(0, 0, 0, 0.8); /* Darker background for visibility */
+    right: -100%;
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(6px);
     height: 40vh;
     width: 60%;
@@ -102,7 +103,7 @@ nav.active{
     text-align: center;
     justify-content: center;
     margin-top: 100px;
-    padding-bottom: 50px;
+    padding: 10px;
 }
 .date{
     font-size: 0.9rem;
@@ -191,7 +192,7 @@ nav.active{
     margin-top: 30px;
 }
 
-.skill h3 {
+h3 {
     font-size: 1.8rem;
     margin-bottom: 20px;
     color: #00e676;
@@ -230,7 +231,10 @@ nav.active{
 .skill-list i {
     font-size: 1.5rem;
 }
-
+.horizontal-line{
+    border: 0.2px solid grey;
+    margin-top: 30px;
+}
 /* Resume Button */
 .btn {
     display: inline-block;
@@ -245,7 +249,7 @@ nav.active{
 }
 
 .btn:hover {
-    background: #ffffff;
+    background: #00c853;
     color: #121212;
 }
 
@@ -328,6 +332,10 @@ button:hover{
     border-radius: 16px;
     padding: 10px 6px;
 }
+.contact h3{
+    color: #fff;
+    font-size: 1.5rem;
+}
 .contact a{
     text-decoration: none;
     color: #000;
@@ -347,6 +355,7 @@ button:hover {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+
 }
 
 .footer-icon a {
