@@ -18,6 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       await loadComponent('/src/components/header.html', 'header');
       console.log("Header loaded successfully!");
+      document.querySelector('.hamburger').addEventListener('click', ()=>{
+        console.log('hamburger')
+        const navMenu = document.querySelector('#nav-menu')
+        console.log(navMenu)
+        navMenu.classList.toggle('active')
+    })
     } catch (error) {
       console.error("Error loading header:", error);
     }

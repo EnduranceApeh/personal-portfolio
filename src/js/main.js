@@ -90,8 +90,6 @@ function initHeaderScripts() {
 
 // Wait for DOM Content Before Running
 document.addEventListener("DOMContentLoaded", async () => {
-    console.log("DOM fully loaded!");
-
     // Load Header First
     await loadComponent('/src/components/header.html', 'header');
     document.querySelector('.hamburger').addEventListener('click', ()=>{
