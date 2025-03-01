@@ -69,6 +69,7 @@ body{
     color: #000;
     border: none;
     padding: 15px 20px;
+    font-family: "Philosopher", sans-serif;
     font-weight: bold;
     margin-top: 20px;
     cursor: pointer;
@@ -98,18 +99,18 @@ body{
     }
   }
 /* About Section */
-#about {
+.about {
     text-align: center;
     padding: 60px 20px;
     color: #ffffff;
-    background: #121212; /* Dark background */
+    background: #121212;
 }
 
 /* Heading */
 #about h2 {
     font-size: 2.2rem;
     margin-bottom: 20px;
-    color: #00e676; /* Bright color for contrast */
+    color: #00e676;
 }
 
 /* About Text */
@@ -170,7 +171,10 @@ h3 {
     margin-top: 30px;
 }
 /* Resume Button */
-.btn {
+.resume{
+    text-align: center;
+}
+.resume-btn {
     display: inline-block;
     text-decoration: none;
     background: #00e676;
@@ -186,10 +190,12 @@ h3 {
     background: #00c853;
     color: #121212;
 }
-
+#projects-section{
+    margin-top: 50px;
+}
 .project-heading h3{
     font-size: 2.6rem;
-    line-height: 2px;
+    line-height: 19px;
     text-align: center;
     color: #00e676;
 }
@@ -301,4 +307,86 @@ button:hover {
 
 .footer-icon a:hover {
     color: #00e676;
+}
+@media (min-width: 768px) {
+    /* Tablet View */
+    .hero-section{
+        margin-top: 180px;
+    }
+
+    .image {
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    .project {
+        width: 45%;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    /* Desktop View */
+    .hero-section{
+        flex-direction: column;
+    }
+    .hero-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: last baseline;
+        max-width: 50%;
+        text-align: left;
+        margin-top: 0;
+    }
+    .hero-text .sub-heading{
+        padding: 0;
+        text-align: left;
+        width: 80%;
+    }
+    .image {
+        width: 550px;
+        height: 500px;
+        
+    }
+    .about{
+        display: flex;
+        align-items: first baseline;
+        justify-content: center;
+        margin: 0 auto;
+        width: 80%;
+        gap: 90px;
+    }
+    .about-text{
+        text-align: left;
+    }
+    .about-me h3{
+        text-align: left;
+    }
+    .resume{
+        text-align: center;
+    }
+    #projects-section{
+        margin-top: 50px;
+    }
+    .project-heading p {
+        width: 30%;
+    }
+    .project {
+        width: 30%;
+    }
+
+    .footer {
+        max-width: 1200px;
+        margin: auto;
+    }
 }

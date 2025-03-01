@@ -1,12 +1,12 @@
 .contact-date{
-    margin-top: 80px;
+    margin-top: 130px;
     padding: 10px;
     text-align: center;
 }
 
 /* General form container styles */
 .form-container {
-    max-width: 400px;
+    max-width: 500px;
     margin: 20px auto;
     padding: 20px;
     
@@ -163,5 +163,11 @@ button:hover {
 @media (max-width: 600px) {
     .form-container {
         width: 90%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .form-container{
+        width: 700px;
     }
 }

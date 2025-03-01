@@ -1,30 +1,52 @@
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
     overflow-x: hidden;
 }
-header a{
+header a {
     text-decoration: none;
     color: white;
+    position: relative;
+    display: inline-block;
 }
-#header {
-    
+
+/* Line effect on hover */
+nav ul li a::after {
+    content: "";
     position: absolute;
-    top: 6%;
-    width: 90%;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+#header {
+    position: fixed;
+    top: 4%; /* Adjusted from 6% to 4% */
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
+    z-index: 1000;
 }
 
 .nav-bar {
-    
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
     width: 100%;
     left: 0;
-    z-index: 1000;
-    position: absolute;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
     animation: text-focus-in 1s linear 0s 1 normal none;
@@ -55,33 +77,80 @@ nav ul {
     padding: 40px 20px;
     gap: 10px;
 }
-nav ul li a{
+
+nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 1.3rem;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
-    
 }
 
 .hamburger {
     width: 40px;
 }
-nav.active{
+
+nav.active {
     right: 0;
 }
+
 /* Fixed and centered when scrolled */
 .nav-bar.scrolled {
     position: fixed;
-    top: 7%;
+    top: 6%; /* Adjusted from 7% to 6% */
     left: 50%;
     width: 89%;
     transform: translate(-50%, -50%);
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border-radius: 50px;
-    padding: 0 10px;
+    padding: 40px 10px;
     justify-content: space-between;
     transition: opacity 3s;
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    #header {
+        width: 90%;
+        height: 60px;
+        margin: 0 auto;
+        position: fixed;
+        top: 5%; /* Adjusted from 0% to 5% */
+        left: 50%;
+        transform: translateX(-50%);
+       
+        padding: 10px 20px;
+        z-index: 1000;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-bar {
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    nav {
+        position: static;
+        background: none;
+        box-shadow: none;
+        backdrop-filter: none;
+        height: auto;
+        width: auto;
+    }
+
+    nav ul {
+        flex-direction: row;
+        padding: 0;
+        gap: 50px;
+        display: flex;
+        align-items: center;
+    }
 }
