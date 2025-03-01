@@ -19,11 +19,11 @@ This is my personal portfolio website, designed with a dark background to showca
 ## 🔧 Setup & Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/portfolio.git
+   git clone https://github.com/EnduranceApeh/personal-portfolio.git
    ```
 2. Open the project folder:
    ```sh
-   cd portfolio
+   cd personal-portfolio
    ```
 3. Open `index.html` in your browser.
 
@@ -48,7 +48,7 @@ personal-portfolio/
 ```
 
 ## 🌍 Live Demo
-Check out the live version: [Your Portfolio URL](https://yourportfolio.com)
+Check out the live version: [Portfolio Live Demo](https://substantial-autumn-abundant.on-fleek.app/)
 
 ## 📬 Contact Me
 - Email: your.email@example.com
